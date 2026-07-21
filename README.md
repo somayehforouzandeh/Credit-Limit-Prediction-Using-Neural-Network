@@ -28,7 +28,7 @@ The project demonstrates a complete machine learning workflow, including data pr
 * Normalize numerical features
 * Build a neural network regression model
 * Evaluate model performance using statistical metrics
-* Visualize the model training process and predictions
+* Visualize the training process and prediction results
 
 ---
 
@@ -120,37 +120,43 @@ MSE  = 19,814,772
 RMSE = 4,451.38
 ```
 
-The RMSE represents the typical prediction error in the same unit as the target variable.
+RMSE represents the typical prediction error in the same unit as the target variable.
 
 ---
 
 ## 📈 Model Training Performance
 
-The following visualization shows the training and validation loss during the 30 training epochs.
-
 <p align="center">
   <img src="Screenshots/Neural%20Network%20Training%20Performance.png" alt="Neural Network Training Performance" width="800">
 </p>
+
+**English:** The chart shows the training and validation loss during 30 epochs. The decreasing loss indicates that the model progressively improved its learning performance.
+
+**فارسی:** این نمودار روند خطای آموزش و اعتبارسنجی مدل را طی ۳۰ دوره نشان می‌دهد. کاهش خطا بیانگر بهبود تدریجی عملکرد مدل در فرایند یادگیری است.
 
 ---
 
 ## 🎯 Actual vs. Predicted Credit Limit
 
-This visualization compares the actual credit limit values with the values predicted by the neural network model.
-
 <p align="center">
   <img src="Screenshots/Actual%20vs%20Predicted%20Credit%20Limit.png" alt="Actual vs Predicted Credit Limit" width="800">
 </p>
+
+**English:** This visualization compares the actual credit limit values with the values predicted by the neural network model.
+
+**فارسی:** این نمودار مقادیر واقعی سقف اعتباری را با مقادیر پیش‌بینی‌شده توسط مدل شبکه عصبی مقایسه می‌کند.
 
 ---
 
 ## 📋 Final Model Evaluation Results
 
-The final evaluation results of the neural network model are summarized below.
-
 <p align="center">
   <img src="Screenshots/Model%20Evaluation%20Results.png" alt="Model Evaluation Results" width="700">
 </p>
+
+**English:** The final evaluation results summarize the prediction performance of the neural network model using MSE and RMSE metrics.
+
+**فارسی:** این تصویر نتایج نهایی عملکرد مدل شبکه عصبی را با استفاده از معیارهای MSE و RMSE خلاصه می‌کند.
 
 ---
 
@@ -230,4 +236,3 @@ Industrial Engineer | Business Intelligence | Data Analytics
 ---
 
 ⭐ Explore the code, visualizations, and machine learning workflow to understand how neural networks can be applied to credit limit prediction.
-
