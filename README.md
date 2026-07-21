@@ -24,6 +24,8 @@ The dataset used in this project was provided for educational purposes as part o
 
 The original dataset is not included in this repository.
 
+---
+
 ## 🎯 Objectives
 
 * Predict customer credit limits using machine learning
