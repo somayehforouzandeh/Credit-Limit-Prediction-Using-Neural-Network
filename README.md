@@ -20,8 +20,6 @@ The project demonstrates a complete machine learning workflow, including data pr
 
 ## 📊 Dataset
 
-The dataset used in this project was provided for educational purposes as part of a training course.
-
 The original dataset is not included in this repository.
 
 ---
