@@ -172,7 +172,7 @@ The final evaluation results summarize the prediction performance of the neural 
 ## 📂 Project Structure
 
 ```text
-Credit-Limit-Prediction-Deep-Learning//
+Credit-Limit-Prediction-Deep-Learning/
 │
 ├── Assets/
 │   └── Credit-Limit-Prediction-Banner.png
