@@ -73,12 +73,90 @@ model = Sequential([
 model.compile(optimizer='adam', loss='mse', metrics=['mae'])
 
 # آموزش مدل
-model.fit(X_train, y_train, epochs=30, batch_size=32, validation_split=0.2)
+history = model.fit(
+    X_train,
+    y_train,
+    epochs=30,
+    batch_size=32,
+    validation_split=0.2
+)
+# نمایش روند آموزش مدل
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 5))
+
+plt.plot(history.history["loss"], label="Training Loss")
+plt.plot(history.history["val_loss"], label="Validation Loss")
+
+plt.title("Neural Network Training Performance")
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+plt.legend()
+plt.grid(True)
+
+plt.show()
 
 # پیش‌بینی و ارزیابی مدل
 y_pred = model.predict(X_test).flatten()
 mse = mean_squared_error(y_test, y_pred)
 rmse = np.sqrt(mse)
+# Actual vs Predicted Credit Limit
+plt.figure(figsize=(8, 6))
+
+plt.scatter(y_test, y_pred, alpha=0.5)
+
+plt.xlabel("Actual Credit Limit")
+plt.ylabel("Predicted Credit Limit")
+plt.title("Actual vs. Predicted Credit Limit")
+
+# خط ایده‌آل پیش‌بینی
+min_value = min(y_test.min(), y_pred.min())
+max_value = max(y_test.max(), y_pred.max())
+
+plt.plot(
+    [min_value, max_value],
+    [min_value, max_value],
+    linestyle="--"
+)
+
+plt.grid(True)
+plt.tight_layout()
+plt.show()
 
 print('MSE:', mse)
 print('RMSE:', rmse)
+# Display final model evaluation results
+plt.figure(figsize=(8, 5))
+
+plt.axis("off")
+
+plt.text(
+    0.5,
+    0.75,
+    "Credit Limit Prediction",
+    ha="center",
+    va="center",
+    fontsize=22,
+    fontweight="bold"
+)
+
+plt.text(
+    0.5,
+    0.55,
+    "Neural Network Model Evaluation",
+    ha="center",
+    va="center",
+    fontsize=16
+)
+
+plt.text(
+    0.5,
+    0.35,
+    f"MSE: {mse:,.2f}\nRMSE: {rmse:,.2f}",
+    ha="center",
+    va="center",
+    fontsize=18
+)
+
+plt.tight_layout()
+plt.show()
