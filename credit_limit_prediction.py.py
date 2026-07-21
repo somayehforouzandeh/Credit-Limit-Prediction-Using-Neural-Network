@@ -12,7 +12,7 @@ from tensorflow.keras.layers import Dense, Input
 print("Current Directory:", os.getcwd())
 
 # مسیر فایل CSV (مسیر دقیق خود را جایگزین کنید)
-file_path = r"D:\AI\MACHIN LEARNING\CreditPrediction.csv"
+file_path = "Data/CreditPrediction.csv"
 
 # اطمینان از وجود فایل
 if not os.path.exists(file_path):
